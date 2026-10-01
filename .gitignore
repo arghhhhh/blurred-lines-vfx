@@ -53,3 +53,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+# Local editor state, unity-cli captures, personal notes
+[Uu]ser[Ss]ettings/
+.unity/
+prompt.txt
