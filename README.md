@@ -16,7 +16,17 @@ Live depth-camera visuals for performances. Works with either a **ZED** stereo c
 2. Select **Director** and choose **ZED** or **Kinect** in the **Source** dropdown of the Depth Camera Selector.
 3. Connect that camera and press Play.
 
-While playing, the arrow keys and mouse scroll adjust focus distance and the near/far clipping planes. With the ZED, press **R** to reload the scene if the camera stops responding.
+### Live controls
+
+| Keys | Controls |
+|---|---|
+| ← / → | Near clipping plane (hides points closer than it) |
+| Shift + ← / → | Far clipping plane (hides points farther than it) |
+| Mouse scroll, or Shift + ↑ / ↓ | Focus distance (depth-of-field on the particle effect) |
+| ↑ / ↓ | Lines brightness (0 = off) |
+| R | Reload the scene (ZED only), if the camera stops responding |
+
+Speeds, limits and key assignments are configurable on the **VFX Keyboard Control** component on **Director**.
 
 ## Credits
 

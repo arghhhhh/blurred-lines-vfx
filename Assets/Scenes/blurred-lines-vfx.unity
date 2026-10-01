@@ -578,7 +578,6 @@ GameObject:
   - component: {fileID: 1185085214}
   - component: {fileID: 1185085213}
   - component: {fileID: 1185085212}
-  - component: {fileID: 1185085211}
   - component: {fileID: 1185085210}
   - component: {fileID: 1185085216}
   m_Layer: 0
@@ -653,27 +652,6 @@ VisualEffect:
         m_Overridden: 1
     m_Bool:
       m_Array: []
---- !u!114 &1185085211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185085209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c40519914bdce4495011d54c3f14e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KinectVfx.VFXScrollControl
-  vfxGraph: {fileID: 1185085210}
-  useMouseScrollWheel: 0
-  useLeftRightArrowKeys: 0
-  useUpDownArrowKeys: 1
-  scrollControlledProperty: Focus Distance
-  leftRightProperty: Clipping Plain Near
-  upDownProperty: Lines Brightness Multiplier
-  scrollSpeed: 0.5
-  arrowSpeed: 15
 --- !u!114 &1185085212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,6 +920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795796955}
   - component: {fileID: 1795796956}
+  - component: {fileID: 1795796957}
   m_Layer: 0
   m_Name: Director
   m_TagString: Untagged
@@ -981,6 +960,57 @@ MonoBehaviour:
   - {fileID: 1821845983}
   - {fileID: 1185085209}
   zedRig: {fileID: 721396978}
+--- !u!114 &1795796957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795796953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a1f358ba99c9a4ca1a67d6390b70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KinectVfx.VFXKeyboardControl
+  targets:
+  - {fileID: 1821845985}
+  - {fileID: 1185085210}
+  bindings:
+  - property: Clipping Plain Near
+    decrease: 276
+    increase: 275
+    shift: 0
+    keySpeed: 1
+    scrollStep: 0
+    min: 0
+    max: Infinity
+  - property: Clipping Plain Far
+    decrease: 276
+    increase: 275
+    shift: 1
+    keySpeed: 3
+    scrollStep: 0
+    min: 0
+    max: Infinity
+  - property: Focus Distance
+    decrease: 274
+    increase: 273
+    shift: 1
+    keySpeed: 2
+    scrollStep: 0.5
+    min: 0
+    max: Infinity
+  - property: Lines Brightness Multiplier
+    decrease: 274
+    increase: 273
+    shift: 0
+    keySpeed: 15
+    scrollStep: 0
+    min: 0
+    max: Infinity
+  minClipGap: 0.1
+  nearProperty: Clipping Plain Near
+  farProperty: Clipping Plain Far
 --- !u!1 &1821845983
 GameObject:
   m_ObjectHideFlags: 0

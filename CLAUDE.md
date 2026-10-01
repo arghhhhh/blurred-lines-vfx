@@ -72,7 +72,7 @@ Select **Director** and use the **Source** dropdown on `DepthCameraSelector` (ZE
 
 ### Interactive Controls (`Assets/Kinect/Core/`)
 
-- **VFXScrollControl.cs** - Arrow keys + mouse scroll adjust VFX Graph parameters at runtime (focus distance, near/far clipping planes).
+- **VFXKeyboardControl.cs** - On Director. A list of bindings that nudge exposed VFX floats on every target graph exposing them (targets: Depth VFX + Lines VFX). Defaults: ←/→ near clip, Shift+←/→ far clip, scroll or Shift+↑/↓ focus distance (Depth only), ↑/↓ Lines Brightness Multiplier (Lines only, min 0). Keeps near < far by `minClipGap`. Uses the legacy `Input` class. Replaced the per-object `VFXScrollControl`.
 
 ## VFX Graph Assets (`Assets/VFX/`)
 
