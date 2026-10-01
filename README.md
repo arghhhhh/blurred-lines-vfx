@@ -1,6 +1,6 @@
 # Blurred Lines VFX
 
-https://github.com/user-attachments/assets/bbab1ac9-9fee-4e11-9c28-be474536b60f
+![Blurred Lines VFX: live depth-camera point cloud rendered as glowing particles and lines](media/blurred-lines.webp)
 
 Live depth-camera visuals for performances. Works with either a **ZED** stereo camera or a **Kinect V2**.
 
