@@ -1008,6 +1008,14 @@ MonoBehaviour:
     scrollStep: 0
     min: 0
     max: Infinity
+  - property: Pulse Period
+    decrease: 91
+    increase: 93
+    shift: 0
+    keySpeed: 2
+    scrollStep: 0
+    min: 0.5
+    max: Infinity
   minClipGap: 0.1
   nearProperty: Clipping Plain Near
   farProperty: Clipping Plain Far

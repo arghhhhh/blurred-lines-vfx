@@ -72,13 +72,15 @@ Select **Director** and use the **Source** dropdown on `DepthCameraSelector` (ZE
 
 ### Interactive Controls (`Assets/Kinect/Core/`)
 
-- **VFXKeyboardControl.cs** - On Director. A list of bindings that nudge exposed VFX floats on every target graph exposing them (targets: Depth VFX + Lines VFX). Defaults: ←/→ near clip, Shift+←/→ far clip, scroll or Shift+↑/↓ focus distance (Depth only), ↑/↓ Lines Brightness Multiplier (Lines only, min 0). Keeps near < far by `minClipGap`. Uses the legacy `Input` class. Replaced the per-object `VFXScrollControl`.
+- **VFXKeyboardControl.cs** - On Director. A list of bindings that nudge exposed VFX floats on every target graph exposing them (targets: Depth VFX + Lines VFX). Defaults: ←/→ near clip, Shift+←/→ far clip, scroll or Shift+↑/↓ focus distance (Depth only), ↑/↓ Lines Brightness Multiplier (Lines only, min 0), [/] Pulse Period (Depth only, min 0.5). Keeps near < far by `minClipGap`. Uses the legacy `Input` class. Replaced the per-object `VFXScrollControl`.
 
 ## VFX Graph Assets (`Assets/VFX/`)
 
 | Asset | Notes |
 |-------|-------|
 | `Depth.vfx` | Depth particles with focus distance, saturation/brightness clipping, near/far planes, height limits |
+
+**Focus pulse (Depth.vfx, "Focus" blackboard category):** every `Pulse Period` seconds focus moves from `Focus Distance` to `Focus Distance + Pulse Focus Offset` and back, following the `Pulse Shape` curve (time 0-1 = one period, value 0-1 = share of the offset). Chain: VFX Total Time / Pulse Period -> Fractional -> Sample Curve -> x Offset -> + Focus Distance -> `Depth Of Field In Local` block (Output context); `Blur Radius` drives that block's Radius. `Pulse Focus Offset = 0` disables the pulse. A sticky note in the graph explains the same.
 | `Lines.vfx` | Line particle variant |
 
 ### Subgraphs (`Assets/VFX/Subgraphs/`)

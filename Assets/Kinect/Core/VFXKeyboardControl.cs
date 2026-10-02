@@ -35,6 +35,7 @@ namespace KinectVfx
             new Binding { property = "Clipping Plain Far", decrease = KeyCode.LeftArrow, increase = KeyCode.RightArrow, shift = true, keySpeed = 3f, min = 0f },
             new Binding { property = "Focus Distance", decrease = KeyCode.DownArrow, increase = KeyCode.UpArrow, shift = true, keySpeed = 2f, scrollStep = 0.5f, min = 0f },
             new Binding { property = "Lines Brightness Multiplier", decrease = KeyCode.DownArrow, increase = KeyCode.UpArrow, keySpeed = 15f, min = 0f },
+            new Binding { property = "Pulse Period", decrease = KeyCode.LeftBracket, increase = KeyCode.RightBracket, keySpeed = 2f, min = 0.5f },
         };
 
         [Tooltip("Keeps the near plane at least this far in front of the far plane.")]

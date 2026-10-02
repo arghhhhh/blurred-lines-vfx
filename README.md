@@ -24,6 +24,7 @@ Live depth-camera visuals for performances. Works with either a **ZED** stereo c
 | Shift + ← / → | Far clipping plane (hides points farther than it) |
 | Mouse scroll, or Shift + ↑ / ↓ | Focus distance (depth-of-field on the particle effect) |
 | ↑ / ↓ | Lines brightness (0 = off) |
+| [ / ] | Focus pulse period: time between focus pulses (min 0.5 s) |
 | R | Reload the scene (ZED only), if the camera stops responding |
 
 Speeds, limits and key assignments are configurable on the **VFX Keyboard Control** component on **Director**.
